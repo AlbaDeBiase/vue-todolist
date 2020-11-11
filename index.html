@@ -11,10 +11,11 @@
     <body>
         <div id="container">
             <h1 :class="titolo">{{titolo}}</h1>
-            <input type="text" id="nuova_azione" name="" value="">
-            <button type="button" id="inserisci" name="button">inserisci</button>
-                <ul id="esempio">
-                    <li v-for="azione in azioni" :key="azione.message">
+            <input v-model="nuova_azione" type="text" name="" value="">
+            <p> {{nuova_azione}}</p>
+            <button type="button" id="inserisci" @click="inserisci_item" name="button">inserisci</button>
+                <ul id="lista">
+                    <li v-for="(azione,indice) in azioni">
                         {{azione.message}}
                     </li>
                 </ul>

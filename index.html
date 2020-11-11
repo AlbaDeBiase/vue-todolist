@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>to-do</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        </head>
+    </head>
+    <body>
+        <div id="container">
+            <h1 :class="titolo">{{titolo}}</h1>
+            <input type="text" id="nuova_azione" name="" value="">
+            <button type="button" id="inserisci" name="button">inserisci</button>
+                <ul id="esempio">
+                    <li v-for="azione in azioni" :key="azione.message">
+                        {{azione.message}}
+                    </li>
+                </ul>
+        </div>
+
+
+
+    <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>

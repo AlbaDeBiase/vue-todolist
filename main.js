@@ -4,32 +4,27 @@
 // al click su un item della lista, il todo viene rimosso
 // BONUS: intercettare anche il tasto "ENTER" per aggiungere un nuovo todo
 
-var app = new Vue(
-    {
-        el: '#container',
-        data() {
-        return{
-            titolo: 'Lista di cose da fare',
-            azioni: [
-                        { message: 'studiare'},
-                        { message:'leggere'},
-                        { message:'ripassare'},
-                        { message:'comprare il latte'},
-                        { message:'andare a correre'}
-                    ],
-            nuova_azione: '',
+var app = new Vue({
 
-        }
-},
-// mounted: function() {
-// this.inserisci_item();
-// },
-        methods: {
-            inserisci_item(nuova_azione){
+    el: '#container',
+    data: {
+        titolo: 'Lista di cose da fare',
+        azioni: [
+            { message: 'studiare'},
+            { message:'leggere'},
+            { message:'ripassare'},
+            { message:'comprare il latte'},
+            { message:'andare a correre'}
+        ],
+        nuova_azione: '',
+
+    },
+
+    methods: {
+        inserisci_item(){
             console.log(this.nuova_azione);
-        // azioni.push(this.nuova_azione);
-},
-}
-
+            this.azioni.push({message: this.nuova_azione});
+        },
+    },
 
 })

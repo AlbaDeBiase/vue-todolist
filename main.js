@@ -22,9 +22,11 @@ var app = new Vue({
 
     methods: {
         inserisci_item(){
-            console.log(this.nuova_azione);
             this.azioni.push({message: this.nuova_azione});
         },
-    },
 
+        rimuovi_item(indice){
+            this.azioni.splice(indice,1);
+        },
+    }
 })

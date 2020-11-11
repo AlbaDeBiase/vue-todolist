@@ -15,7 +15,7 @@
             <p> {{nuova_azione}}</p>
             <button type="button" id="inserisci" @click="inserisci_item" name="button">inserisci</button>
                 <ul id="lista">
-                    <li v-for="(azione,indice) in azioni">
+                    <li v-for="(azione,indice ) in azioni" :key=azione @click="rimuovi_item(indice)">
                         {{azione.message}}
                     </li>
                 </ul>

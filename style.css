@@ -4,10 +4,50 @@
   box-sizing: border-box;
 }
 
+body{
+    color: purple;
+    font-family: cursive;
+
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background-color: pink;
+
+}
+
+
+
 button{
 cursor: pointer;
+margin: 10px;
+padding: 10px;
+border-radius: 10px;
+font-size: 20px;
+background-color: #ff5c79;
+color:white;
+border:solid 1px white;
+
+}
+
+button:hover{
+    background-color: purple;
+    color:white;
+    transition: 2s;
+    opacity: 0.5;
+    border: 2px solid purple;
 }
 
 li{
     cursor: pointer;
+    margin: 10px;
+    /* list-style-type: none; */
+}
+
+input{
+    margin:10px;
 }

@@ -10,13 +10,14 @@
     </head>
     <body>
         <div id="container">
-            <h1 :class="titolo">{{titolo}}</h1>
-            <input v-model="nuova_azione" type="text" name="" value="">
+            <h1 :class="titolo">{{titolo}} <i class="fas fa-check"></i></h1>
+            <input v-model="nuova_azione" type="text" name="" value="" placeholder="Scrivi nuova azione">
             <p> {{nuova_azione}}</p>
-            <button type="button" id="inserisci" @click="inserisci_item" name="button">inserisci</button>
+            <button type="button" id="inserisci" @click="inserisci_item" name="button">Inserisci nell lista</button>
                 <ul id="lista">
                     <li v-for="(azione,indice ) in azioni" :key=azione @click="rimuovi_item(indice)">
                         {{azione.message}}
+                        <i class="fas fa-check"></i>
                     </li>
                 </ul>
         </div>

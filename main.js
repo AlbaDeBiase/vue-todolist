@@ -23,6 +23,8 @@ var app = new Vue({
     methods: {
         inserisci_item(){
             this.azioni.push({message: this.nuova_azione});
+            // resetto l'input
+            message: this.nuova_azione='';
         },
 
         rimuovi_item(indice){
